@@ -14,5 +14,5 @@ function addBookToLibrary() {
   myLibrary.push(newBook);
 }
 
-addBookToLibrary();
-console.table(myLibrary);
+// addBookToLibrary();
+//console.table(myLibrary);
