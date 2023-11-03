@@ -4,6 +4,7 @@
   --color-background: #fefae0;
   --color-secondary-light: #faedcd;
   --color-secondary: #d4a373;
+  --color-secondary-darker: #b4895e;
 }
 
 * {
@@ -20,6 +21,20 @@ body {
 header {
   background-color: var(--color-primary-light);
   padding: 1rem;
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: large;
+  font-weight: bold;
+  background-color: var(--color-secondary);
+  color: var(--color-primary-light);
+  border: none;
+  border-radius: 1rem;
+}
+
+.button:hover {
+  background-color: var(--color-secondary-darker);
 }
 
 .modal {
