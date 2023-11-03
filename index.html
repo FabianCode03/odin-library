@@ -24,20 +24,21 @@
     </header>
     <main>
       <dialog class="modal">
-        <h1>TEST</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. In possimus
-          reprehenderit assumenda pariatur omnis, voluptas corporis placeat at
-          minus unde, reiciendis sed eligendi quaerat veniam veritatis. Alias
-          iusto exercitationem quae!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-          perspiciatis debitis commodi assumenda itaque sint, dolorem velit
-          impedit aperiam quos similique, quam dolores! Doloremque, optio? Ut
-          dolore cupiditate laudantium nesciunt.
-        </p>
-        <button>close modal</button>
+        <form action="#">
+          <legend>Add new book</legend>
+          <div class="form-grid">
+            <label for="title">Title</label>
+            <input id="title" type="text" />
+            <label for="author">Author</label>
+            <input id="author" type="text" />
+            <label for="pages">Pages</label>
+            <input id="pages" type="number" />
+            <label for="read">Have you read it?</label>
+            <input id="read" type="checkbox" />
+          </div>
+        </form>
+        <button>Cancel</button>
+        <button type="submit">Add</button>
       </dialog>
     </main>
   </body>
