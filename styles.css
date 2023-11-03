@@ -1,4 +1,9 @@
 :root {
+  --color-primary: #ccd5ae;
+  --color-primary-light: #e9edc9;
+  --color-background: #fefae0;
+  --color-secondary-light: #faedcd;
+  --color-secondary: #d4a373;
 }
 
 * {
@@ -7,8 +12,12 @@
   padding: 0;
 }
 
+body {
+  background-color: var(--color-primary);
+}
+
 header {
-  background-color: teal;
+  background-color: var(--color-primary-light);
   padding: 1rem;
 }
 
