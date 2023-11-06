@@ -23,7 +23,7 @@ header {
   padding: 1rem;
 }
 
-.button {
+header .button {
   padding: 1rem 2rem;
   font-size: large;
   font-weight: bold;
@@ -45,11 +45,24 @@ header {
   max-width: 30em;
 
   background-color: var(--color-secondary);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+form {
+  font-size: large;
+}
+
+legend {
+  font-size: x-large;
+  font-weight: bold;
+  padding-bottom: 1rem;
 }
 
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .page-container {
