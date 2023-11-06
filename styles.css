@@ -45,12 +45,13 @@ header .button {
   max-width: 30em;
 
   background-color: var(--color-secondary);
-  padding: 1rem;
   border-radius: 1rem;
+  border: none;
 }
 
 form {
   font-size: large;
+  margin: 1rem;
 }
 
 legend {
@@ -85,4 +86,5 @@ legend {
 .modal-button {
   font-size: large;
   flex: 1;
+  border: none;
 }
