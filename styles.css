@@ -35,6 +35,10 @@ header .button {
   border-radius: 1rem;
 }
 
+button {
+  font-family: inherit;
+}
+
 .button:hover {
   background-color: var(--color-secondary-darker);
 }
@@ -49,6 +53,8 @@ header .button {
   background-color: var(--color-secondary);
   border-radius: 1rem;
   border: none;
+
+  font-weight: bold;
 }
 
 form {
@@ -82,13 +88,14 @@ legend {
 .button-row {
   display: flex;
   width: 100%;
-  margin-top: 1rem;
 }
 
 .modal-button {
   font-size: large;
+  font-weight: bold;
   flex: 1;
   border: none;
+  padding: 0.75rem;
 }
 
 .cancel {
