@@ -5,6 +5,8 @@
   --color-secondary-light: #faedcd;
   --color-secondary: #d4a373;
   --color-secondary-darker: #b4895e;
+  --color-accept: #5aa05a;
+  --color-cancel: #d54c4c;
 }
 
 * {
@@ -87,4 +89,12 @@ legend {
   font-size: large;
   flex: 1;
   border: none;
+}
+
+.cancel {
+  background-color: var(--color-cancel);
+}
+
+.add {
+  background-color: var(--color-accept);
 }
