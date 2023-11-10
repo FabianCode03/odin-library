@@ -7,7 +7,9 @@
   --color-secondary: #d4a373;
   --color-secondary-darker: #b4895e;
   --color-accept: #5aa05a;
+  --color-accept-darker: #4d944d;
   --color-cancel: #d54c4c;
+  --color-cancel-darker: #c43e3e;
 }
 
 * {
@@ -123,6 +125,14 @@ input:hover {
   background-color: var(--color-cancel);
 }
 
+.cancel:hover {
+  background-color: var(--color-cancel-darker);
+}
+
 .add {
   background-color: var(--color-accept);
+}
+
+.add:hover {
+  background-color: var(--color-accept-darker);
 }
