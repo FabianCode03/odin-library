@@ -19,5 +19,7 @@ function addBookToLibrary() {
 
 const modal = document.querySelector(".modal");
 const openModal = document.querySelector(".open-modal");
+const closeModal = document.querySelector(".cancel");
 
 openModal.addEventListener("click", () => modal.showModal());
+closeModal.addEventListener("click", () => modal.close());
