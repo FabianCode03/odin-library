@@ -95,10 +95,15 @@ legend {
   padding-left: 5px;
 }
 
+input:hover {
+  background-color: var(--color-primary-light);
+}
+
 .input:focus:not([type="checkbox"]) {
   outline-style: solid;
   outline-width: 4px;
   outline-color: var(--color-primary-darker);
+  background-color: var(--color-primary-light);
 }
 
 .button-row {
