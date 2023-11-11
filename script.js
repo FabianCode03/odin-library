@@ -29,6 +29,7 @@ function addBook(e) {
   addBookToDom(newBook);
   form.reset();
   modal.close();
+  console.log(myLibrary);
 }
 
 function changeReadStatus(e) {
@@ -63,6 +64,25 @@ function addBookToDom(book) {
   let readButtons = document.querySelectorAll(".read, .notRead");
   let lastReadButton = readButtons[readButtons.length - 1];
   lastReadButton.addEventListener("click", e => changeReadStatus(e));
+
+  let removeButtons = document.querySelectorAll(".removeBook");
+  let lastRemoveButton = removeButtons[removeButtons.length - 1];
+  lastRemoveButton.addEventListener("click", e => removeBook(e));
+}
+
+function removeBook(e) {
+  // Finden Sie das Buch-Element im DOM
+  let bookElement = e.target.parentNode;
+
+  // Finden Sie den Index des Buches im Array
+  let index = Array.from(bookElement.parentNode.children).indexOf(bookElement);
+
+  // Entfernen Sie das Buch aus dem Array
+  myLibrary.splice(index, 1);
+
+  // Entfernen Sie das Buch aus dem DOM
+  bookElement.remove();
+  console.log(myLibrary);
 }
 
 // event listeners
