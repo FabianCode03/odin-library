@@ -25,7 +25,10 @@ body {
 
 header {
   background-color: var(--color-primary-light);
-  padding: 1rem;
+}
+
+main {
+  padding: 4rem 0;
 }
 
 header .button {
@@ -84,6 +87,7 @@ legend {
 .page-container {
   max-width: 100em;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 .flex-container {
@@ -139,4 +143,60 @@ input:hover {
 
 .add:hover {
   background-color: var(--color-accept-darker);
+}
+
+.book-display {
+  /* min-height: 30rem; */
+  /* border: 1px solid black; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+}
+
+.book {
+  display: grid;
+  gap: 1rem;
+  background-color: var(--color-secondary);
+  align-self: start;
+  padding: 2rem;
+  border-radius: 1rem;
+  font-weight: bold;
+}
+
+.book-title {
+  text-decoration: underline;
+}
+
+.book p {
+  font-size: x-large;
+}
+
+.book button {
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: large;
+  font-weight: bold;
+  border: none;
+}
+
+.read {
+  background-color: var(--color-accept);
+}
+
+.read:hover {
+  background-color: var(--color-accept-darker);
+}
+
+.notRead {
+  background-color: var(--color-cancel);
+}
+
+.notRead:hover {
+  background-color: var(--color-cancel-darker);
+}
+
+.removeBook {
+  background-color: var(--color-secondary-light);
 }
