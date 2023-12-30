@@ -1,3 +1,12 @@
+class Library {
+  #books = [];
+
+  constructor() {}
+
+  addbook() {}
+  removeBook(e) {}
+}
+
 // selectors and variable definitions
 const myLibrary = [];
 const modal = document.querySelector(".modal");
@@ -63,11 +72,11 @@ function addBookToDom(book) {
   // Fügen Sie den Event-Listener zum zuletzt hinzugefügten "Read"-Button hinzu
   let readButtons = document.querySelectorAll(".read, .notRead");
   let lastReadButton = readButtons[readButtons.length - 1];
-  lastReadButton.addEventListener("click", e => changeReadStatus(e));
+  lastReadButton.addEventListener("click", (e) => changeReadStatus(e));
 
   let removeButtons = document.querySelectorAll(".removeBook");
   let lastRemoveButton = removeButtons[removeButtons.length - 1];
-  lastRemoveButton.addEventListener("click", e => removeBook(e));
+  lastRemoveButton.addEventListener("click", (e) => removeBook(e));
 }
 
 function removeBook(e) {
@@ -86,6 +95,6 @@ function removeBook(e) {
 }
 
 // event listeners
-submitButton.addEventListener("click", e => addBook(e));
+submitButton.addEventListener("click", (e) => addBook(e));
 openModal.addEventListener("click", () => modal.showModal());
 closeModal.addEventListener("click", () => modal.close());

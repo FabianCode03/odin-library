@@ -4,6 +4,9 @@ node_modules/
 # Ignore logs
 *.log
 
+# Ignore prettier
+.prettierrc
+
 # Ignore the npm debug log
 npm-debug.log*
 
