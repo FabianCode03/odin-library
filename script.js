@@ -66,7 +66,7 @@ class Displaycontroller {
   toggleRead = document.querySelectorAll(".read");
   bookDisplay = document.querySelector(".book-display");
 
-  constructor() {
+  addEventListeners() {
     submitButton.addEventListener("click", (e) => addBook(e));
     openModal.addEventListener("click", () => modal.showModal());
     closeModal.addEventListener("click", () => modal.close());
@@ -159,3 +159,6 @@ class Displaycontroller {
 //   bookElement.remove();
 //   console.log(myLibrary);
 // }
+
+const library = new Library();
+const displaycontroller = new Displaycontroller();
