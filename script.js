@@ -3,8 +3,19 @@ class Library {
 
   constructor() {}
 
-  addbook() {}
+  addBook() {}
   removeBook(e) {}
+}
+
+class Book {
+  constructor(title, author, numberOfPages, read) {
+    this.title = title;
+    this.author = author;
+    this.numberOfPages = numberOfPages;
+    this.read = read;
+  }
+
+  changeReadStatus() {}
 }
 
 // selectors and variable definitions
@@ -18,12 +29,12 @@ const toggleRead = document.querySelectorAll(".read");
 const bookDisplay = document.querySelector(".book-display");
 
 // constructor
-function Book(title, author, numberOfPages, read) {
-  this.title = title;
-  this.author = author;
-  this.numberOfPages = numberOfPages;
-  this.read = read;
-}
+// function Book(title, author, numberOfPages, read) {
+//   this.title = title;
+//   this.author = author;
+//   this.numberOfPages = numberOfPages;
+//   this.read = read;
+// }
 
 function addBook(e) {
   e.preventDefault();
