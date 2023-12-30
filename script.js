@@ -18,15 +18,31 @@ class Book {
   changeReadStatus() {}
 }
 
+class Displaycontroller {
+  modal = document.querySelector(".modal");
+  openModal = document.querySelector(".open-modal");
+  closeModal = document.querySelector(".cancel");
+  submitButton = document.querySelector(".add");
+  form = document.querySelector("#form");
+  toggleRead = document.querySelectorAll(".read");
+  bookDisplay = document.querySelector(".book-display");
+
+  constructor() {
+    submitButton.addEventListener("click", (e) => addBook(e));
+    openModal.addEventListener("click", () => modal.showModal());
+    closeModal.addEventListener("click", () => modal.close());
+  }
+}
+
 // selectors and variable definitions
-const myLibrary = [];
-const modal = document.querySelector(".modal");
-const openModal = document.querySelector(".open-modal");
-const closeModal = document.querySelector(".cancel");
-const submitButton = document.querySelector(".add");
-const form = document.querySelector("#form");
-const toggleRead = document.querySelectorAll(".read");
-const bookDisplay = document.querySelector(".book-display");
+// const myLibrary = [];
+// const modal = document.querySelector(".modal");
+// const openModal = document.querySelector(".open-modal");
+// const closeModal = document.querySelector(".cancel");
+// const submitButton = document.querySelector(".add");
+// const form = document.querySelector("#form");
+// const toggleRead = document.querySelectorAll(".read");
+// const bookDisplay = document.querySelector(".book-display");
 
 // constructor
 // function Book(title, author, numberOfPages, read) {
@@ -104,8 +120,3 @@ function removeBook(e) {
   bookElement.remove();
   console.log(myLibrary);
 }
-
-// event listeners
-submitButton.addEventListener("click", (e) => addBook(e));
-openModal.addEventListener("click", () => modal.showModal());
-closeModal.addEventListener("click", () => modal.close());
