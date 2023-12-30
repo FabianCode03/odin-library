@@ -1,9 +1,7 @@
 class Library {
-  #books = [];
+  books = [];
 
-  constructor() {}
-
-  addBook() {
+  addBook(e) {
     e.preventDefault();
 
     let title = document.getElementById("title").value;
@@ -12,11 +10,11 @@ class Library {
     let read = document.getElementById("read").checked;
 
     const newBook = new Book(title, author, numberOfPages, read);
-    myLibrary.push(newBook);
-    addBookToDom(newBook);
-    form.reset();
-    modal.close();
-    console.log(myLibrary);
+    library.books.push(newBook);
+    displaycontroller.addBookToDom(newBook);
+    displaycontroller.form.reset();
+    displaycontroller.modal.close();
+    console.log(library.books);
   }
   removeBook(e) {
     // Finden Sie das Buch-Element im DOM
@@ -28,11 +26,11 @@ class Library {
     );
 
     // Entfernen Sie das Buch aus dem Array
-    myLibrary.splice(index, 1);
+    library.books.splice(index, 1);
 
     // Entfernen Sie das Buch aus dem DOM
     bookElement.remove();
-    console.log(myLibrary);
+    console.log(library.books);
   }
 }
 
@@ -44,7 +42,7 @@ class Book {
     this.read = read;
   }
 
-  changeReadStatus() {
+  static changeReadStatus(e) {
     if (e.target.classList.contains("read")) {
       e.target.classList.remove("read");
       e.target.classList.add("notRead");
@@ -67,9 +65,9 @@ class Displaycontroller {
   bookDisplay = document.querySelector(".book-display");
 
   addEventListeners() {
-    submitButton.addEventListener("click", (e) => addBook(e));
-    openModal.addEventListener("click", () => modal.showModal());
-    closeModal.addEventListener("click", () => modal.close());
+    this.submitButton.addEventListener("click", (e) => library.addBook(e));
+    this.openModal.addEventListener("click", () => this.modal.showModal());
+    this.closeModal.addEventListener("click", () => this.modal.close());
   }
 
   addBookToDom(book) {
@@ -86,18 +84,25 @@ class Displaycontroller {
   `;
 
     // Fügen Sie das Buch-Template als neues Kind-Element ein
-    bookDisplay.insertAdjacentHTML("beforeend", bookTemplate);
+    this.bookDisplay.insertAdjacentHTML("beforeend", bookTemplate);
 
     // Fügen Sie den Event-Listener zum zuletzt hinzugefügten "Read"-Button hinzu
     let readButtons = document.querySelectorAll(".read, .notRead");
     let lastReadButton = readButtons[readButtons.length - 1];
-    lastReadButton.addEventListener("click", (e) => changeReadStatus(e));
+    lastReadButton.addEventListener("click", (e) => Book.changeReadStatus(e));
 
     let removeButtons = document.querySelectorAll(".removeBook");
     let lastRemoveButton = removeButtons[removeButtons.length - 1];
-    lastRemoveButton.addEventListener("click", (e) => removeBook(e));
+    lastRemoveButton.addEventListener("click", (e) => library.removeBook(e));
   }
 }
+
+const library = new Library();
+const displaycontroller = new Displaycontroller();
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  displaycontroller.addEventListeners();
+});
 
 // selectors and variable definitions
 // const myLibrary = [];
@@ -159,6 +164,3 @@ class Displaycontroller {
 //   bookElement.remove();
 //   console.log(myLibrary);
 // }
-
-const library = new Library();
-const displaycontroller = new Displaycontroller();
