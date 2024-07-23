@@ -1,3 +1,45 @@
-h1{
-    color: red;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif
+}
+
+header{
+    background-color: #333;
+    color: white;
+}
+
+.flex-divider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+#logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#add-button{
+    background-color: white;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-button span{
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+#add-button i{
+    color: #333;
 }
