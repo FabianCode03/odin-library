@@ -33,6 +33,7 @@ header{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    border: 2px solid #333;
 }
 
 #add-button span{
@@ -42,4 +43,14 @@ header{
 
 #add-button i{
     color: #333;
+}
+
+#add-button:hover{
+    background-color: #333;
+    color: white;
+    border-color: white;
+}
+
+#add-button:hover i{
+    color: white;
 }
